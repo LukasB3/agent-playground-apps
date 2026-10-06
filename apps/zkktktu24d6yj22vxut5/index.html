@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="playground-job" content="zkktktu24d6yj22vxut5"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tip Calculator &amp; Bill Splitter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <h1>Tip Calculator</h1>
+  <p class="sub">Add a tip and split the bill.</p>
+  <form id="form" autocomplete="off">
+    <label for="bill">Bill amount</label>
+    <input id="bill" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0.00">
+
+    <label>Tip</label>
+    <div class="tips" id="tips">
+      <button type="button" data-tip="10">10%</button>
+      <button type="button" data-tip="15">15%</button>
+      <button type="button" data-tip="18">18%</button>
+      <button type="button" data-tip="20" class="active">20%</button>
+      <button type="button" data-tip="25">25%</button>
+    </div>
+    <label for="custom">Custom tip %</label>
+    <input id="custom" type="number" inputmode="decimal" min="0" step="0.5" placeholder="Custom %">
+
+    <label for="people">Number of people</label>
+    <div class="stepper">
+      <button type="button" id="minus" aria-label="Fewer people">−</button>
+      <input id="people" type="number" min="1" step="1" value="1">
+      <button type="button" id="plus" aria-label="More people">+</button>
+    </div>
+
+    <label class="check"><input id="round" type="checkbox"> Round each share up to a whole amount</label>
+  </form>
+
+  <section class="results" aria-live="polite">
+    <div class="row big"><span>Per person</span><strong id="perPerson">0.00</strong></div>
+    <div class="row"><span>Tip total</span><strong id="tipTotal">0.00</strong></div>
+    <div class="row"><span>Bill + tip</span><strong id="total">0.00</strong></div>
+    <p id="note" class="note"></p>
+  </section>
+  <button type="button" id="reset" class="reset">Reset</button>
+</main>
+<script src="app.js"></script>
+
+
+<a href="https://agent-playground.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from Agent Playground</a></body></html>
