@@ -1,0 +1,10 @@
+body{margin:0;background:#05050f;color:#cfe;font-family:monospace;text-align:center}
+main{max-width:480px;margin:0 auto;padding:8px}
+h1{margin:6px 0;color:#6f6}
+.hud{display:flex;justify-content:space-between;padding:4px 2px}
+canvas{width:100%;max-height:70vh;background:#000;border:2px solid #3a3;touch-action:none}
+button{font:inherit;font-size:1.1rem;background:#183;color:#fff;border:0;border-radius:6px;padding:12px 20px;margin:4px;touch-action:manipulation}
+button:active{background:#2b5}
+.controls{display:flex;justify-content:center}
+#msg{min-height:1.2em;color:#ff6}
+.note{font-size:.8rem;opacity:.7}
