@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center;
+  font-family: system-ui, sans-serif; background: #1e2235; color: #f2f3f8;
+}
+main { width: 100%; max-width: 420px; padding: 16px; text-align: center; }
+h1 { margin: 0 0 12px; }
+.scores { display: flex; gap: 8px; margin-bottom: 12px; }
+.score { flex: 1; padding: 8px; border-radius: 10px; background: #2b3050; font-size: .85rem; border: 2px solid transparent; }
+.score strong { font-size: 1.4rem; }
+.score.active { border-color: currentColor; }
+.x { color: #ff6b81; } .o { color: #4dd2ff; } .draw { color: #ccc; }
+#status { font-size: 1.2rem; min-height: 1.6em; margin: 8px 0; }
+#board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.cell {
+  aspect-ratio: 1; border: 0; border-radius: 12px; background: #2b3050;
+  font-size: clamp(2.5rem, 16vw, 4.5rem); font-weight: 700; cursor: pointer; color: inherit;
+}
+.cell:hover:not(:disabled) { background: #363c63; }
+.cell:disabled { cursor: default; }
+.cell.x { color: #ff6b81; } .cell.o { color: #4dd2ff; }
+.cell.win { background: #3f7a56; animation: pop .4s ease; }
+@keyframes pop { 50% { transform: scale(1.1); } }
+.buttons { margin-top: 16px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+button { font: inherit; padding: 10px 16px; border-radius: 10px; border: 0; background: #6c7bff; color: #fff; cursor: pointer; }
+button.secondary { background: #3a4066; }
+button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }

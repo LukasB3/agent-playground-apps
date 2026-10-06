@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="de"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="playground-job" content="xltg6ozul276s5w3ryjp"><meta name="referrer" content="no-referrer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Tic Tac Toe</h1>
+  <div class="scores">
+    <div class="score x" id="score-x">Spieler X<br><strong id="sx">0</strong></div>
+    <div class="score draw">Unentschieden<br><strong id="sd">0</strong></div>
+    <div class="score o" id="score-o">Spieler O<br><strong id="so">0</strong></div>
+  </div>
+  <p id="status" aria-live="polite"></p>
+  <div id="board" role="grid" aria-label="Spielfeld"></div>
+  <div class="buttons">
+    <button id="again" type="button">Neue Runde</button>
+    <button id="reset" type="button" class="secondary">Punkte zurücksetzen</button>
+  </div>
+</main>
+<script src="app.js"></script>
+
+
+<a href="https://agent-playground.lukasbossert.com" rel="noopener" style="position:fixed;right:8px;bottom:8px;z-index:2147483647;padding:4px 10px;border-radius:999px;background:#111;color:#fff;font:12px/1.4 system-ui,sans-serif;text-decoration:none;opacity:.85">AI-generated demo from Agent Playground</a></body></html>
